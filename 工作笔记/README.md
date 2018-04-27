@@ -34,3 +34,16 @@
      -DgroupId=pom.xml中的groupId
      
  ````
+ 
+*  格式化SQL
+
+ ````
+ <bean id="entityManagerFactory" class="xx"
+    <property name="jpaProperties"> 
+      <props> 
+        <prop key="hibernate.show_sql">true</prop>
+        <prop key="hibernate.format_sql">true</prop>
+      </props> 
+    </property> 
+  </bean>  
+ ````
