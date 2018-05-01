@@ -1,3 +1,7 @@
+####视频
+* [链接](https://pan.baidu.com/s/1pmoWyPPYgbxbl9yDe5hFhQ) 密码: 82hm
+
+----
 ####水平分割： [sharding-jdbc](http://shardingjdbc.io/)
 
 ````
