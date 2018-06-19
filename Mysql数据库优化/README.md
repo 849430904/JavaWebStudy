@@ -87,7 +87,11 @@
   
 ````
 
-##### 数据库监控
+##### 数据库连接查询
 
 ````
+  显示连接列表：show processlist;
+  查询数据库当前设置的最大连接数：show variables like '%max_connections%';
+  显示当前连接数：show status like 'Threads%';
+  显示连接状态：SHOW STATUS LIKE '%connect%';
 ````
