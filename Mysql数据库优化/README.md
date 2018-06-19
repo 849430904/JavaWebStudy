@@ -67,7 +67,7 @@
      
      
   开启慢查询：set GLOBAL  slow_query_log = 'ON';
-  设置慢查询的阀值为: set GLOBAL long_query_time = 0.1;   
+  设置慢查询的阀值为: set GLOBAL long_query_time = 0.1;   //单位为秒
   查询慢查询的阀值：show global variables like 'long_query_time%';
   设置日志输出到表中：set GLOBAL log_output='TABLE';
   设置日志文件路径：set global general_log_file='/tmp/general.log';
@@ -76,7 +76,14 @@
   查询有哪些系统表： show tables;//要选中mysql(使用use mysql;)，这样可以看到日志相关的表
   
   
-  查询最耗时间的SQL: select * From slow_log order by query_time desc limit 10;
+  测试一下慢查询：
+     SELECT sysdate(), sleep(10), sysdate();//花费10s执行一条select
+  
+  查询最耗时间的SQL: 
+  select * From slow_log order by query_time desc limit 10;
+  SELECT start_time, query_time, sql_text FROM slow_log order by query_time desc limit 10;
+  
+  
   
 ````
 
