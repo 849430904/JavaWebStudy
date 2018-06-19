@@ -76,6 +76,8 @@
   查询有哪些系统表： show tables;//要选中mysql(使用use mysql;)，这样可以看到日志相关的表
   
   
+  查询最耗时间的SQL: select * From slow_log order by query_time desc limit 10;
+  
 ````
 
 ##### 数据库监控
