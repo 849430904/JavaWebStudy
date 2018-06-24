@@ -33,8 +33,8 @@
             <file leaf-file-name="JobMisFireTest.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/test/java/org/quartz/JobMisFireTest.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="330">
-                    <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+                  <state relative-caret-position="210">
+                    <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
                     <folding />
                   </state>
                 </provider>
@@ -48,47 +48,17 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="JobRunShell.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/core/JobRunShell.java">
+      <file leaf-file-name="JobStoreSupport.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/impl/jdbcjobstore/JobStoreSupport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="228" column="0" lean-forward="true" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JobExecutionContextImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/impl/JobExecutionContextImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="162" column="5" lean-forward="false" selection-start-line="162" selection-start-column="5" selection-end-line="167" selection-end-column="0" />
+            <state relative-caret-position="88">
+              <caret line="3614" column="8" lean-forward="false" selection-start-line="3614" selection-start-column="8" selection-end-line="3614" selection-end-column="8" />
               <folding>
-                <element signature="e#4146#4147#0" expanded="true" />
-                <element signature="e#4174#4175#0" expanded="true" />
-                <element signature="e#4874#4875#0" expanded="true" />
-                <element signature="e#4900#4901#0" expanded="true" />
+                <element signature="e#9110#9111#0" expanded="true" />
+                <element signature="e#9152#9153#0" expanded="true" />
+                <element signature="e#31524#31536#0" expanded="true" />
+                <element signature="e#106861#106881#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JobExecutionContextSupport.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/core/jmx/JobExecutionContextSupport.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="61" column="47" lean-forward="false" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TriggerSupport.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/core/jmx/TriggerSupport.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="84" column="44" lean-forward="false" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -96,38 +66,88 @@
       <file leaf-file-name="QuartzScheduler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/core/QuartzScheduler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="1945" column="0" lean-forward="false" selection-start-line="1945" selection-start-column="0" selection-end-line="1945" selection-end-column="0" />
+            <state relative-caret-position="446">
+              <caret line="574" column="52" lean-forward="true" selection-start-line="574" selection-start-column="52" selection-end-line="574" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleThreadPool.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/simpl/SimpleThreadPool.java">
+      <file leaf-file-name="JobStore.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/spi/JobStore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="597">
-              <caret line="575" column="0" lean-forward="false" selection-start-line="575" selection-start-column="0" selection-end-line="575" selection-end-column="0" />
+            <state relative-caret-position="226">
+              <caret line="84" column="9" lean-forward="false" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CronTriggerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/quartz/CronTriggerTest.java">
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/impl/jdbcjobstore/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1665">
-              <caret line="129" column="37" lean-forward="false" selection-start-line="129" selection-start-column="37" selection-end-line="129" selection-end-column="37" />
+            <state relative-caret-position="226">
+              <caret line="150" column="11" lean-forward="false" selection-start-line="150" selection-start-column="11" selection-end-line="150" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MisfireExample.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/quartz/MisfireExample.java">
+      <file leaf-file-name="Trigger.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/Trigger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="74" column="61" lean-forward="true" selection-start-line="74" selection-start-column="61" selection-end-line="74" selection-end-column="61" />
+            <state relative-caret-position="15">
+              <caret line="60" column="16" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SchedulerSignaler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/spi/SchedulerSignaler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="39" column="9" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractJobStoreTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/quartz/AbstractJobStoreTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="546" column="38" lean-forward="true" selection-start-line="546" selection-start-column="38" selection-end-line="546" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OperableTrigger.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/spi/OperableTrigger.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="90" column="16" lean-forward="false" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DriverDelegate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/impl/jdbcjobstore/DriverDelegate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="142" column="22" lean-forward="false" selection-start-line="142" selection-start-column="22" selection-end-line="142" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StdJDBCDelegate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/impl/jdbcjobstore/StdJDBCDelegate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="350" column="19" lean-forward="false" selection-start-line="350" selection-start-column="19" selection-end-line="350" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -144,11 +164,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>MyRetryJob</find>
       <find>JobExecutionException</find>
       <find>jobExEx</find>
       <find>getRefireCount</find>
       <find>toCompositeData</find>
+      <find>创建了一个shell.....</find>
+      <find>clearFromBusyWorkersList.....</find>
+      <find>runOnce</find>
+      <find>txCallback</find>
+      <find>validate</find>
+      <find>selectTrigger（）</find>
+      <find>selectTrigger（</find>
+      <find>selectTrigger(:</find>
+      <find>selectTrigger//(</find>
+      <find>selectTrigger/(</find>
+      <find>selectTrigger(</find>
+      <find>selectTrigger:(</find>
+      <find>selectTrigger:</find>
+      <find>selectTrigger</find>
+      <find>retrieveTrigger</find>
+      <find>.retrieveTrigger</find>
+      <find>getTrigger</find>
+      <find>.getTrigger</find>
+      <find>MISFIRE_INSTR</find>
+      <find>dbRetryInterval</find>
+      <find>txCallbacktxCallback</find>
+      <find>QuartzSchedulerThread</find>
+      <find>notifyTriggerListenersMisfired</find>
+      <find>// 清理misfire的jobs</find>
+      <find>maxToRecoverAtATime</find>
+      <find>recoverMisfiredJobs</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -160,15 +205,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/org/quartz/ee/jta/JTAJobRunShell.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/quartz/core/QuartzSchedulerThread.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/quartz/simpl/SimpleThreadPool.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/quartz/JobExceptionTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/quartz/DefaultSchedulerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/quartz/core/JobRunShell.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/quartz/core/jmx/TriggerSupport.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/quartz/simpl/SimpleThreadPool.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/quartz/JobMisFireTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/quartz/MisfireExample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/quartz/core/QuartzSchedulerThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/quartz/core/JobRunShell.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/quartz/impl/jdbcjobstore/StdJDBCDelegate.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/quartz/impl/JobExecutionContextImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/quartz/impl/triggers/CronTriggerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/quartz/impl/jdbcjobstore/JobStoreSupport.java" />
       </list>
     </option>
   </component>
@@ -179,10 +227,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="319" />
-    <option name="y" value="23" />
-    <option name="width" value="1072" />
-    <option name="height" value="796" />
+    <option name="x" value="27" />
+    <option name="y" value="203" />
+    <option name="width" value="1389" />
+    <option name="height" value="717" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -482,7 +530,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="MisF&#9;FILE&#9;file:///Users/zhangping/Documents/github/JavaWebStudy/Quartz/quartz-explained/src/test/java/org/quartz/MisfireExample.java&#10;scheduleT&#9;PSI&#9;JAVA://org.quartz.DefaultSchedulerTest&#10;QuartzSchedulerThread&#9;PSI&#9;JAVA://org.quartz.core.QuartzSchedulerThread" />
+    <property name="SearchEverywhereHistoryKey" value="ClusterManager&#9;PSI&#9;JAVA://org.quartz.impl.jdbcjobstore.JobStoreSupport.ClusterManager&#10;Sched&#9;FILE&#9;file:///Users/zhangping/Documents/github/JavaWebStudy/Quartz/quartz-explained/src/main/java/org/quartz/core/QuartzScheduler.java&#10;QuartzScheduler&#9;FILE&#9;file:///Users/zhangping/Documents/github/JavaWebStudy/Quartz/quartz-explained/src/main/java/org/quartz/core/QuartzScheduler.java&#10;Schedu&#9;FILE&#9;file:///Users/zhangping/Documents/github/JavaWebStudy/Quartz/quartz-explained/src/main/java/org/quartz/core/QuartzSchedulerThread.java&#10;MisF&#9;FILE&#9;file:///Users/zhangping/Documents/github/JavaWebStudy/Quartz/quartz-explained/src/test/java/org/quartz/MisfireExample.java&#10;scheduleT&#9;PSI&#9;JAVA://org.quartz.DefaultSchedulerTest&#10;QuartzSchedulerThread&#9;PSI&#9;JAVA://org.quartz.core.QuartzSchedulerThread" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -981,7 +1029,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529798937450</updated>
-      <workItem from="1529798941725" duration="7074000" />
+      <workItem from="1529798941725" duration="13593000" />
     </task>
     <servers />
   </component>
@@ -1018,10 +1066,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7074000" />
+    <option name="totallyTimeSpent" value="13593000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="319" y="23" width="1072" height="796" extended-state="0" />
+    <frame x="27" y="203" width="1389" height="717" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1035,7 +1083,7 @@
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2485437" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19005197" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1060,13 +1108,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/quartz/core/JobRunShell.java</url>
-          <line>195</line>
+          <url>file://$PROJECT_DIR$/src/main/java/org/quartz/impl/jdbcjobstore/StdJDBCDelegate.java</url>
+          <line>1767</line>
           <properties />
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1075,14 +1123,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/JobExecutionContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="158" column="15" lean-forward="false" selection-start-line="158" selection-start-column="15" selection-end-line="158" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/JobListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="526">
@@ -1091,26 +1131,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/impl/triggers/AbstractTrigger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="535" column="63" lean-forward="true" selection-start-line="535" selection-start-column="19" selection-end-line="535" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/openejb/javaee-api/5.0-2/javaee-api-5.0-2.jar!/javax/transaction/UserTransaction.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/spi/OperableTrigger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-276">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1151,22 +1175,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="511">
           <caret line="95" column="22" lean-forward="true" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/core/JobRunShellFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="59" column="16" lean-forward="false" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/core/QuartzSchedulerThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="427" column="64" lean-forward="false" selection-start-line="427" selection-start-column="64" selection-end-line="427" selection-end-column="64" />
           <folding />
         </state>
       </provider>
@@ -1283,19 +1291,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/quartz/CronTriggerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1665">
-          <caret line="129" column="37" lean-forward="false" selection-start-line="129" selection-start-column="37" selection-end-line="129" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/lang/Runnable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="559">
           <caret line="67" column="25" lean-forward="false" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/quartz/CronTriggerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1410">
+          <caret line="129" column="37" lean-forward="false" selection-start-line="129" selection-start-column="37" selection-end-line="129" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/simpl/SimpleThreadPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="575" column="43" lean-forward="true" selection-start-line="575" selection-start-column="43" selection-end-line="575" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/quartz/MisfireExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="77" column="38" lean-forward="true" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/core/JobRunShellFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="59" column="16" lean-forward="false" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/core/jmx/JobExecutionContextSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="28" column="68" lean-forward="true" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/util/concurrent/atomic/AtomicBoolean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="84" column="25" lean-forward="false" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
+          <folding>
+            <element signature="e#1819#1820#0" expanded="false" />
+            <element signature="e#1852#1853#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1307,64 +1358,200 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/core/QuartzScheduler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/utils/Key.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="1945" column="0" lean-forward="false" selection-start-line="1945" selection-start-column="0" selection-end-line="1945" selection-end-column="0" />
+        <state relative-caret-position="683">
+          <caret line="62" column="11" lean-forward="false" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/simpl/SimpleThreadPool.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/TriggerKey.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="575" column="0" lean-forward="false" selection-start-line="575" selection-start-column="0" selection-end-line="575" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="445">
+          <caret line="66" column="11" lean-forward="false" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
+          <folding>
+            <element signature="e#2287#2288#0" expanded="false" />
+            <element signature="e#2321#2322#0" expanded="false" />
+            <element signature="e#2500#2501#0" expanded="false" />
+            <element signature="e#2550#2551#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/impl/JobExecutionContextImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1995">
+          <caret line="170" column="0" lean-forward="true" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
+          <folding>
+            <element signature="e#3473#3474#0" expanded="false" />
+            <element signature="e#3503#3504#0" expanded="false" />
+            <element signature="e#4246#4247#0" expanded="false" />
+            <element signature="e#4279#4280#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/core/JobRunShell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="228" column="0" lean-forward="true" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
+        <state relative-caret-position="-351">
+          <caret line="66" column="32" lean-forward="false" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="3166" column="25" lean-forward="false" selection-start-line="3166" selection-start-column="25" selection-end-line="3166" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/core/SchedulerSignalerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="71" column="46" lean-forward="false" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/quartz/JobMisFireTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/impl/JobExecutionContextImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/core/QuartzSchedulerThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="162" column="5" lean-forward="false" selection-start-line="162" selection-start-column="5" selection-end-line="167" selection-end-column="0" />
+        <state relative-caret-position="260">
+          <caret line="59" column="31" lean-forward="true" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/core/QuartzSchedulerResources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="35" column="4" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/impl/jdbcjobstore/StdJDBCConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="92" column="11" lean-forward="false" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/impl/triggers/AbstractTrigger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="703" column="20" lean-forward="true" selection-start-line="703" selection-start-column="20" selection-end-line="703" selection-end-column="20" />
           <folding>
-            <element signature="e#4146#4147#0" expanded="true" />
-            <element signature="e#4174#4175#0" expanded="true" />
-            <element signature="e#4874#4875#0" expanded="true" />
-            <element signature="e#4900#4901#0" expanded="true" />
+            <element signature="e#20898#20899#0" expanded="true" />
+            <element signature="e#20939#20940#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/core/jmx/JobExecutionContextSupport.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/impl/triggers/CronTriggerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="61" column="47" lean-forward="false" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="47" />
+        <state relative-caret-position="213">
+          <caret line="612" column="16" lean-forward="false" selection-start-line="612" selection-start-column="16" selection-end-line="612" selection-end-column="16" />
+          <folding>
+            <element signature="e#14262#14263#0" expanded="true" />
+            <element signature="e#14310#14311#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/spi/OperableTrigger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="90" column="16" lean-forward="false" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/quartz/MisfireExample.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/quartz/AbstractJobStoreTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="74" column="61" lean-forward="true" selection-start-line="74" selection-start-column="61" selection-end-line="74" selection-end-column="61" />
+        <state relative-caret-position="595">
+          <caret line="546" column="38" lean-forward="true" selection-start-line="546" selection-start-column="38" selection-end-line="546" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/spi/SchedulerSignaler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="39" column="9" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/impl/jdbcjobstore/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="150" column="11" lean-forward="false" selection-start-line="150" selection-start-column="11" selection-end-line="150" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/Trigger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="60" column="16" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/impl/jdbcjobstore/StdJDBCDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="350" column="19" lean-forward="false" selection-start-line="350" selection-start-column="19" selection-end-line="350" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/impl/jdbcjobstore/DriverDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="142" column="22" lean-forward="false" selection-start-line="142" selection-start-column="22" selection-end-line="142" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/core/QuartzScheduler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="574" column="52" lean-forward="true" selection-start-line="574" selection-start-column="52" selection-end-line="574" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/spi/JobStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="84" column="9" lean-forward="false" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/quartz/impl/jdbcjobstore/JobStoreSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="3614" column="8" lean-forward="false" selection-start-line="3614" selection-start-column="8" selection-end-line="3614" selection-end-column="8" />
+          <folding>
+            <element signature="e#9110#9111#0" expanded="true" />
+            <element signature="e#9152#9153#0" expanded="true" />
+            <element signature="e#31524#31536#0" expanded="true" />
+            <element signature="e#106861#106881#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

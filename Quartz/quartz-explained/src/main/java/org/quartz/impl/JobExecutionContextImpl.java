@@ -159,13 +159,6 @@ public class JobExecutionContextImpl implements java.io.Serializable, JobExecuti
      * {@inheritDoc}
      */
     public int getRefireCount() {
-
-//        System.out.println("getRefireCount...........");
-//                StackTraceElement[] stackTraceElements =  Thread.currentThread().getStackTrace();
-//        for (int i=0;i<stackTraceElements.length;i++){
-//            System.out.println(stackTraceElements[i].toString());
-//        }
-
         return numRefires;
     }
 

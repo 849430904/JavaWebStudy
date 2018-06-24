@@ -628,7 +628,7 @@ public class CronTriggerImpl extends AbstractTrigger<CronTrigger> implements Cro
             }
             setNextFireTime(newFireTime);
         } else if (instr == MISFIRE_INSTRUCTION_FIRE_ONCE_NOW) {//instr  == 1
-            setNextFireTime(new Date());
+            setNextFireTime(new Date());//下次触发时间
         }
     }
 

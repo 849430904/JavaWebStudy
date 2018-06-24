@@ -77,7 +77,7 @@ public class MisfireExample {
 
 		//[秒] [分] [小时] [日] [月] [周] [年]
 		CronScheduleBuilder scheduleBuilder = CronScheduleBuilder
-				.cronSchedule("20 10 10 24 6 ?")
+				.cronSchedule("50 28 17 24 6 ?")
 				.inTimeZone(timeZone).withMisfireHandlingInstructionIgnoreMisfires();
 		//按新的cronExpression表达式构建一个新的trigger
 		Trigger trigger = TriggerBuilder.newTrigger().withIdentity("name1",

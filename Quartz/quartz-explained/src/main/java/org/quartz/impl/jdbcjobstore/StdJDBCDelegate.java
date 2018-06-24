@@ -2595,12 +2595,24 @@ public class StdJDBCDelegate implements DriverDelegate, StdJDBCConstants {
      *          
      * @return A (never null, possibly empty) list of the identifiers (Key objects) of the next triggers to be fired.
      */
+    //noLaterThan=当前时间+idleWaitTime+batchTriggerAcquisitionFireAheadTimeWindow，
+    //noEarlierThan=当前时间-MisfireThreshold；
     public List<TriggerKey> selectTriggerToAcquire(Connection conn, long noLaterThan, long noEarlierThan, int maxCount)
         throws SQLException {
         PreparedStatement ps = null;
         ResultSet rs = null;
         List<TriggerKey> nextTriggers = new LinkedList<TriggerKey>();
         try {
+
+//            SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY
+//            FROM qrtz_TRIGGERS
+//            WHERE SCHED_NAME = 'myScheduler'
+//            AND TRIGGER_STATE = 'WAITING'
+//            AND NEXT_FIRE_TIME <= noLaterThan
+//            AND (MISFIRE_INSTR = -1 OR
+//                    (MISFIRE_INSTR != -1 AND NEXT_FIRE_TIME >= noEarlierThan))  //MISFIRE_INSTR 为失败次数
+//            ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC
+
             ps = conn.prepareStatement(rtp(SELECT_NEXT_TRIGGER_TO_ACQUIRE));
             
             // Set max rows to retrieve

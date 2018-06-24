@@ -19,7 +19,7 @@ public class JobMisFireTest implements Job {
 //            System.out.println(stackTraceElements[i].toString());
 //        }
 
-        if(context.getRefireCount() < 2) {//重试一次
+        if(context.getRefireCount() < /*1*/5) {//重试一次
             JobExecutionException jobExecutionException = new JobExecutionException();
             jobExecutionException.setRefireImmediately(true);
             throw jobExecutionException;

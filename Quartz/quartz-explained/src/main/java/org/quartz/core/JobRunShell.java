@@ -254,7 +254,7 @@ public class JobRunShell extends SchedulerListenerSupport implements Runnable {
                                 + jec.getJobDetail().getKey()
                                 + ": couldn't finalize execution.", se);
                     }
-                    continue;
+                    continue;//只要设置了重试，这个do while就会再次循环下去
                 }
 
                 try {

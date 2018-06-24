@@ -914,7 +914,7 @@ public abstract class JobStoreSupport implements JobStore, Constants {
     protected long getMisfireTime() {
         long misfireTime = System.currentTimeMillis();
         if (getMisfireThreshold() > 0) {
-            misfireTime -= getMisfireThreshold();
+            misfireTime -= getMisfireThreshold();//getMisfireThreshold 用来指定调度引擎设置触发器超时的"临界值"。
         }
 
         return (misfireTime > 0) ? misfireTime : 0;
@@ -957,18 +957,19 @@ public abstract class JobStoreSupport implements JobStore, Constants {
         // If recovering, we want to handle all of the misfired
         // triggers right away.
         int maxMisfiresToHandleAtATime = 
-            (recovering) ? -1 : getMaxMisfiresToHandleAtATime();
-        
+            (recovering) ? -1 : getMaxMisfiresToHandleAtATime();//未按时触发的Job的数量
+
+        //定义列表，用以存储misfired triggers
         List<TriggerKey> misfiredTriggers = new LinkedList<TriggerKey>();
         long earliestNewTime = Long.MAX_VALUE;
         // We must still look for the MISFIRED state in case triggers were left 
         // in this state when upgrading to this version that does not support it. 
         boolean hasMoreMisfiredTriggers =
             getDelegate().hasMisfiredTriggersInState(
-                conn, STATE_WAITING, getMisfireTime(), 
-                maxMisfiresToHandleAtATime, misfiredTriggers);
+                conn, STATE_WAITING, getMisfireTime(), //当前时间-超时时间
+                maxMisfiresToHandleAtATime, misfiredTriggers);//未按时触发的触发器存储在misfiredTriggers中
 
-        if (hasMoreMisfiredTriggers) {
+        if (hasMoreMisfiredTriggers) {//还有其他超时未触发的
             getLog().info(
                 "Handling the first " + misfiredTriggers.size() +
                 " triggers that missed their scheduled fire-time.  " +
@@ -986,12 +987,13 @@ public abstract class JobStoreSupport implements JobStore, Constants {
         for (TriggerKey triggerKey: misfiredTriggers) {
             
             OperableTrigger trig = 
-                retrieveTrigger(conn, triggerKey);
+                retrieveTrigger(conn, triggerKey);//从数据库中获取触发器
 
             if (trig == null) {
                 continue;
             }
 
+            //根据特定的trigger类型与指定的处理策略处理对trigger的下一触发时间做出设定，并持久化到数据库。
             doUpdateOfMisfiredTrigger(conn, trig, false, STATE_WAITING, recovering);
 
             if(trig.getNextFireTime() != null && trig.getNextFireTime().getTime() < earliestNewTime)
@@ -1392,7 +1394,7 @@ public abstract class JobStoreSupport implements JobStore, Constants {
         try {
 
             return getDelegate().selectJobDetail(conn, key,
-                    getClassLoadHelper());
+                    getClassLoadHelper());//从数据库中获取job
         } catch (ClassNotFoundException e) {
             throw new JobPersistenceException(
                     "Couldn't retrieve job because a required class was not found: "
@@ -2835,6 +2837,9 @@ public abstract class JobStoreSupport implements JobStore, Constants {
             currentLoopCount ++;
             try {
                 //查询下次触发的触发器 Triggerkey
+                //noLaterThan  =now + idleWaitTime(30s)
+                //timeWindow = 设置的可能提前触发的时间（默认为0）
+               // getMisfireTime() = 当前时间 - getMisfireThreshold()(允许超时的时间)
                 List<TriggerKey> keys = getDelegate().selectTriggerToAcquire(conn, noLaterThan + timeWindow, getMisfireTime(), maxCount);
                 
                 // No trigger is ready to fire yet.
@@ -3019,7 +3024,7 @@ public abstract class JobStoreSupport implements JobStore, Constants {
 
             //如果触发器被删除，状态将是STATE_DELETED
             String state = getDelegate().selectTriggerState(conn,
-                    trigger.getKey());
+                    trigger.getKey());//从数据库中获取状态
             //查询到数据，返回查询到的当前状态，否则返回 STATE_DELETED ，删除状态
             if (!state.equals(STATE_ACQUIRED)) {
                 return null;
@@ -3031,7 +3036,7 @@ public abstract class JobStoreSupport implements JobStore, Constants {
 
         try {
             //恢复job，根据 trigger.getJobKey() 获取Job的name 和 group
-            job = retrieveJob(conn, trigger.getJobKey());
+            job = retrieveJob(conn, trigger.getJobKey());//从数据库中获取job
             if (job == null) { return null; }
         } catch (JobPersistenceException jpe) {
             try {
@@ -3261,7 +3266,8 @@ public abstract class JobStoreSupport implements JobStore, Constants {
                     "Found 0 triggers that missed their scheduled fire-time.");
             } else {
                 transOwner = getLockHandler().obtainLock(conn, LOCK_TRIGGER_ACCESS);
-                
+
+                //检查到有哑火的tirgger，启动recovery程序，处理哑火trigger
                 result = recoverMisfiredJobs(conn, false);
             }
             
@@ -3327,6 +3333,10 @@ public abstract class JobStoreSupport implements JobStore, Constants {
             // and is almost never necessary).  This must be done in a separate
             // transaction to prevent a deadlock under recovery conditions.
             List<SchedulerStateRecord> failedRecords = null;
+
+            //第一次check in时数据库还没有该调度器的数据，要做特殊处理，否则就首先调用clusterCheckIn方法，并提交操作，
+            //clusterCheckIn方法中首先调用findFailedInstances方法，查找数据库中有没有需要recover的trigger，
+            //然后刷新本调度器的check in time
             if (!firstCheckIn) {
                 failedRecords = clusterCheckIn(conn);
                 commitConnection(conn);
@@ -3826,6 +3836,7 @@ public abstract class JobStoreSupport implements JobStore, Constants {
                 getLog().error("retryExecuteInNonManagedTXLock: RuntimeException " + e.getMessage(), e);
             }
             try {
+                //休息15秒或指定的时间，再
                 Thread.sleep(getDbRetryInterval()); // retry every N seconds (the db connection must be failed)
             } catch (InterruptedException e) {
                 throw new IllegalStateException("Received interrupted exception", e);
@@ -3961,6 +3972,7 @@ public abstract class JobStoreSupport implements JobStore, Constants {
                     }
 
                     if(numFails > 0) {
+                        //每次循环会睡眠一个不小于DbRetryInterval(默认15s)的时间
                         timeToSleep = Math.max(getDbRetryInterval(), timeToSleep);
                     }
                     
@@ -3970,6 +3982,8 @@ public abstract class JobStoreSupport implements JobStore, Constants {
                     }
                 }
 
+
+                //调用manage方法，该方法内包含check in与recover的主要逻辑
                 if (!shutdown && this.manage()) {
                     signalSchedulingChangeImmediately(0L);
                 }
