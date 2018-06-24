@@ -151,8 +151,8 @@ public class JobRunShell extends SchedulerListenerSupport implements Runnable {
         qs.addInternalSchedulerListener(this);
 
         try {
-            OperableTrigger trigger = (OperableTrigger) jec.getTrigger();
-            JobDetail jobDetail = jec.getJobDetail();
+            OperableTrigger trigger = (OperableTrigger) jec.getTrigger();//将要触发的触发器
+            JobDetail jobDetail = jec.getJobDetail();//将要执行的job
 
             do {
 
@@ -199,14 +199,14 @@ public class JobRunShell extends SchedulerListenerSupport implements Runnable {
                 // execute the job
                 try {
                     log.debug("Calling execute on job " + jobDetail.getKey());
-                    job.execute(jec);
+                    job.execute(jec);//执行jobexecute ！！！！！！！！！！！-----------------------重点！！！----------------------------
                     endTime = System.currentTimeMillis();
-                } catch (JobExecutionException jee) {
+                } catch (JobExecutionException jee) {//如果execute抛出异常,并且是JobExecutionException,JobExecutionException会保存着是重试,还是结束的信息
                     endTime = System.currentTimeMillis();
                     jobExEx = jee;
                     getLog().info("Job " + jobDetail.getKey() +
                             " threw a JobExecutionException: ", jobExEx);
-                } catch (Throwable e) {
+                } catch (Throwable e) {//execute抛出异常
                     endTime = System.currentTimeMillis();
                     getLog().error("Job " + jobDetail.getKey() +
                             " threw an unhandled Exception: ", e);
@@ -229,7 +229,7 @@ public class JobRunShell extends SchedulerListenerSupport implements Runnable {
 
                 // update the trigger
                 try {
-                    instCode = trigger.executionComplete(jec, jobExEx);
+                    instCode = trigger.executionComplete(jec, jobExEx);//如果jobExEx设置了立即执行，instCode将会返回CompletedExecutionInstruction.RE_EXECUTE_JOB
                 } catch (Exception e) {
                     // If this happens, there's a bug in the trigger...
                     SchedulerException se = new SchedulerException(
@@ -245,8 +245,8 @@ public class JobRunShell extends SchedulerListenerSupport implements Runnable {
                 }
 
                 // update job/trigger or re-execute job
-                if (instCode == CompletedExecutionInstruction.RE_EXECUTE_JOB) {
-                    jec.incrementRefireCount();
+                if (instCode == CompletedExecutionInstruction.RE_EXECUTE_JOB) {///如果jobExEx设置了立即执行，将会执行if里面代码
+                    jec.incrementRefireCount();//触发次数加1
                     try {
                         complete(false);
                     } catch (SchedulerException se) {

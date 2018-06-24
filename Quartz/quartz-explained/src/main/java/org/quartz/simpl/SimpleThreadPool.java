@@ -419,13 +419,13 @@ public class SimpleThreadPool implements ThreadPool {
             // Wait until a worker thread is available
             while ((availWorkers.size() < 1) && !isShutdown) {
                 try {
-                    nextRunnableLock.wait(500);
+                    nextRunnableLock.wait(500);//如果线程不够，等待500毫秒
                 } catch (InterruptedException ignore) {
                 }
             }
 
             if (!isShutdown) {
-                WorkerThread wt = (WorkerThread)availWorkers.removeFirst();
+                WorkerThread wt = (WorkerThread)availWorkers.removeFirst();//LinkedList中取出第一个任务
                 busyWorkers.add(wt);
                 wt.run(runnable);
             } else {
@@ -564,7 +564,7 @@ public class SimpleThreadPool implements ThreadPool {
         public void run() {
             boolean ran = false;
             
-            while (run.get()) {
+            while (run.get()) {//原子操作
                 try {
                     synchronized(lock) {
                         while (runnable == null && run.get()) {

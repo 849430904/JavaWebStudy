@@ -121,7 +121,7 @@ public class JTAJobRunShell extends JobRunShell {
     }
 
     @Override
-    protected void complete(boolean successfulExecution)
+    protected void complete(boolean successfulExecution)//job执行发生异常且指明要重复执行的时候，successfulExecution就为false
         throws SchedulerException {
         if (ut == null) {
             return;

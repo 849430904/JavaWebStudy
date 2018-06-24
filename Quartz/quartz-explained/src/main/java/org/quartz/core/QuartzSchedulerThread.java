@@ -309,9 +309,9 @@ public class QuartzSchedulerThread extends Thread {
 
                         now = System.currentTimeMillis();
                         //若有没有触发的Trigger，下次触发时间 next_fire_time 这个会在启动的时候有个默认的misfire机制，
-                        long triggerTime = triggers.get(0).getNextFireTime().getTime();
+                        long triggerTime = triggers.get(0).getNextFireTime().getTime();//第一个触发器触发的时间
                         long timeUntilTrigger = triggerTime - now;//计算距离trigger触发的时间
-                        while(timeUntilTrigger > 2) {
+                        while(timeUntilTrigger > 2) {//大于2s继续等待
                             synchronized (sigLock) {
                                 if (halted.get()) {
                                     break;
@@ -417,7 +417,7 @@ public class QuartzSchedulerThread extends Thread {
                             JobRunShell shell = null;
                             try {
                                 //创建一个job的Runshell
-                                shell = qsRsrcs.getJobRunShellFactory().createJobRunShell(bndle);
+                                shell = qsRsrcs.getJobRunShellFactory().createJobRunShell(bndle);//负责执行job
                                 shell.initialize(qs);
                             } catch (SchedulerException se) {
                                 qsRsrcs.getJobStore().triggeredJobComplete(triggers.get(i), bndle.getJobDetail(), CompletedExecutionInstruction.SET_ALL_JOB_TRIGGERS_ERROR);

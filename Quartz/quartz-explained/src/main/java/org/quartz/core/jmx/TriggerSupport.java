@@ -76,6 +76,14 @@ public class TriggerSupport {
     
     public static CompositeData toCompositeData(Trigger trigger) {
         try {
+
+            System.out.println("111111111111");
+        StackTraceElement[] stackTraceElements =  Thread.currentThread().getStackTrace();
+        for (int i=0;i<stackTraceElements.length;i++){
+            System.out.println(stackTraceElements[i].toString());
+        }
+            System.out.println("000000000000");
+
             return new CompositeDataSupport(COMPOSITE_TYPE, ITEM_NAMES,
                     new Object[] {
                             trigger.getKey().getName(),
