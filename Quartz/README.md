@@ -46,3 +46,6 @@ public class JobMisFireTest implements Job {
     }
 }
 ````
+
+* 調試群集的JDBC,只需要配置：org.quartz.jobStore.driverDelegateClass＝[xx.DebugQuartzJDBCDelegate](DebugQuartzJDBCDelegate.java)
+
