@@ -47,4 +47,10 @@
   注意：
     注意安装Mavean环境
     可能需要修改zookeeper地址与端口号
+    需要先启动zookeeper服务器
 ````
+
+##### 创建服务提供者、消费者，需求：![](img/008.png)  ，[服务的编写规范可以参考](http://dubbo.apache.org/zh-cn/docs/user/best-practice.html)
+* [服务提供者代码参考](code/user-service-provider)
+* [服务消费者代码参考](code/order-service-consumer)
+* [接品制取](code/gmall-interface)，将消费者与提供者需要的公共接口，单独抽到一个工程中；
