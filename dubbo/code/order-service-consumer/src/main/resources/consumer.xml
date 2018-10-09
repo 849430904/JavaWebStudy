@@ -7,6 +7,9 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd
 		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+	<!--让注解扫描我们的接口所在包-->	
 	<context:component-scan base-package="com.atguigu.gmall.service.impl"></context:component-scan>
 
 
@@ -32,7 +35,7 @@
 	<!-- 配置当前消费者的统一规则：所有的服务都不检查 -->
 	<dubbo:consumer check="false" timeout="5000"></dubbo:consumer>
 
-	<dubbo:monitor protocol="registry"></dubbo:monitor>
-	<!-- <dubbo:monitor address="127.0.0.1:7070"></dubbo:monitor> -->
+	<dubbo:monitor protocol="registry"></dubbo:monitor> <!--配置监控中心 参考：http://dubbo.apache.org/zh-cn/docs/user/references/xml/dubbo-monitor.html-->
+	<!-- <dubbo:monitor address="127.0.0.1:7070"></dubbo:monitor> --><!--直连监控中心-->
 	
 </beans>

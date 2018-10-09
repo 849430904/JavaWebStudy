@@ -54,3 +54,48 @@
 * [服务提供者代码参考](code/user-service-provider)
 * [服务消费者代码参考](code/order-service-consumer)
 * [接品制取](code/gmall-interface)，将消费者与提供者需要的公共接口，单独抽到一个工程中；
+
+````
+  1，将服务提供者注册到注册中心核心步骤
+      1）,导入dubbo依赖。可以在pom文件中引入
+      2），由于注册中心我们使用的是zookeeper，所以我们要引入操作zookeeper的客户端的依赖。可以在pom中导入
+      3），配置服务提供者，参考后面；
+      4)，启动spring容器，到监控中心页面可以看对应的服务与应用
+  2，让服务消费者去注册中心订阅服务提供者的服务地址核心步骤
+      1），导入dubbo依赖。可以在pom文件中引入
+      2），消费者中心配置，参考后面；注意：接口名称要与提供者的接口一样
+      3），启动spring容器，测试
+      
+  System.in.read();测试的时候让程序阻塞，否则程序执行完马上就退出了，到控制台就看不到效果了    
+     
+````
+
+* [dubbo服务提供者配置参考](code/user-service-provider/src/main/resources/provider.xml)
+*  [dubbo消费中心配置](code/order-service-consumer/src/main/resources/consumer.xml)
+
+##### 安装监控中心 dubbo-monitor-smiple
+* dubbo-monitor-smiple监控服务的调用情况,[安装地址](https://github.com/apache/incubator-dubbo-ops) ，[参考](https://blog.csdn.net/goldenfish1919/article/details/69502898)；最后配置在消费者、提供者配置文件里面配置监控中心
+
+##### 整合spring boot,[提供者工程代码](code/boot-user-service-provider) [消费者工程代码](code/boot-order-service-consumer)
+
+````
+ Spring boot的配置方式：
+  1，将服务提供者注册到注册中心核心步骤
+      1）,导入dubbo依赖。可以在pom文件中引入
+      2），由于注册中心我们使用的是zookeeper，所以我们要引入操作zookeeper的客户端的依赖。可以在pom中导入
+      3），导入dubbo-spring-boot-starter依赖 ；如果要暴露的服务很多，也可以通过注解配置要暴露的服务
+      4)，在主程序中开启@EnableDubbo，开启基于注解的dubbo功能；启动spring容器，到监控中心页面可以看对应的服务与应用
+  2，让服务消费者去注册中心订阅服务提供者的服务地址核心步骤
+      1），导入dubbo依赖。可以在pom文件中引入
+      2），消费者中心配置，参考后面；需要消费哪个服务采用@Reference注解方式在代码里面配置
+      3），启动spring容器，测试
+      
+  System.in.read();测试的时候让程序阻塞，否则程序执行完马上就退出了，到控制台就看不到效果了    
+     
+````
+
+* [spring boot dubbo服务提供者配置参考](code/boot-user-service-provider/src/main/resources/provider.xml)
+* [spring boot dubbo消费中心配置](code/boot-order-service-consumer/src/main/resources/application.properties)
+
+
+##### [dubbo配置文件 ](http://dubbo.apache.org/zh-cn/docs/user/references/xml/introduction.html)

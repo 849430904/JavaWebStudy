@@ -13,14 +13,15 @@
 	<!-- <dubbo:registry address="zookeeper://127.0.0.1:2181"></dubbo:registry> -->
 	<dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"></dubbo:registry>
 	
-	<!-- 3、指定通信规则（通信协议？通信端口） -->
+	<!-- 3、指定通信规则（通信协议？通信端口）， -->
+	<!--这一步配置非常重要：因为服务消费者需要用这个端口和协议与服务提供者进行通信-->
 	<dubbo:protocol name="dubbo" port="20882"></dubbo:protocol>
 	
 	<!-- 4、暴露服务   ref：指向服务的真正的实现对象 -->
 	<dubbo:service interface="com.atguigu.gmall.service.UserService" 
 		ref="userServiceImpl01" timeout="1000" version="1.0.0">
 		<dubbo:method name="getUserAddressList" timeout="1000"></dubbo:method>
-	</dubbo:service>
+	</dubbo:service><!--服务只有暴露出去，才能供别人调用；这里的服务的真正实现对象bean的id = userServiceImpl01-->
 	
 	<!--统一设置服务提供方的规则  -->
 	<dubbo:provider timeout="1000"></dubbo:provider>
@@ -37,6 +38,6 @@
 	<bean id="userServiceImpl02" class="com.atguigu.gmall.service.impl.UserServiceImpl2"></bean>
 	
 	<!-- 连接监控中心 -->
-	<dubbo:monitor protocol="registry"></dubbo:monitor>
+	<dubbo:monitor protocol="registry"></dubbo:monitor><!--配置监控中心 参考：http://dubbo.apache.org/zh-cn/docs/user/references/xml/dubbo-monitor.html-->
 	
 </beans>

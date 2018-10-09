@@ -31,6 +31,6 @@
 	
 	
 	<!-- 连接监控中心 -->
-	<dubbo:monitor protocol="registry"></dubbo:monitor>
+	<dubbo:monitor protocol="registry"></dubbo:monitor><!--让它自己去监控中心找-->
 	
 </beans>
