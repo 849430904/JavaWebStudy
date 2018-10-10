@@ -99,3 +99,94 @@
 
 
 ##### [dubbo配置文件 ](http://dubbo.apache.org/zh-cn/docs/user/references/xml/introduction.html)
+
+````
+   配置优先级：虚拟机参数>appliction配置>公共配置
+````
+
+* [启动检查](http://dubbo.apache.org/zh-cn/docs/user/demos/preflight-check.html)
+
+````
+   默认情况下，消费者启动的时候会去检查与它相关的服务提供者；如果服务提供者没有开启，消费者启动就不会报错
+````
+
+* [超时配置](http://dubbo.apache.org/zh-cn/docs/user/references/xml/dubbo-reference.html),参考链接中的timeout属性
+* [配置覆盖关系(优先级关系)](http://dubbo.apache.org/zh-cn/docs/user/configuration/xml.html)
+
+````
+   如果服务消费者调用服务提供者的时候，服务提供者可能阻塞、忙不过来。这时候可以在消费者方配置一个超时时间；默认超时为1s
+   
+   优先级：
+     1），精确优先（方法级优先，接口级次之，全局配置再次之）
+     2），消费者设置优先（如果级别一样，则消费者优先，提供方次之）
+````
+
+* 重试次数
+
+````
+  当我们调用服务，由于各种原因，导致失败；我们可以配置重试次数（不包括第一次）
+  
+  幂等方法（可设置重试次数）【查询、删除、修改】，方法不管运行多少次，都是一个结果；
+  非幂等方法（不能重试次数）【增加】，方法每次运行的结果都会产生一个新的结果；如数据库增加操作就不能让用户重试
+  怎么设置幂等？设置retries为0就OK了
+````
+
+* [多版本](http://dubbo.apache.org/zh-cn/docs/user/demos/multi-versions.html)
+
+````
+ 当一个接口实现，出现不兼容升级时，可以用版本号过渡，版本号不同的服务相互间不引用。
+ 可以先让一部份人用新版本，一部份人用旧版本，等版本稳定了再切换过来
+````
+
+* [本地存根](http://dubbo.apache.org/zh-cn/docs/user/demos/local-stub.html)
+
+````
+
+  消费者 调用 服务提供者
+  可以在调用服务提供者之前，利用本地的存根代码检查一下参数再调用远程服务；
+````
+
+* Springboot的方式配置
+
+````
+   一般可以通过注解配置
+   
+   Springboot与dubbo整合的三种方式 ：
+   1），导入dubbo-starter,在application.properties配置属性，使用@service暴露服务，使用@Reference
+   2),如果想进行方法级别的配置，可以 保留dubbo xml配置文件 ，@ImportResource（location:xxxx）,导入配置文件。
+      在配置文件中，以前怎么写，现在就怎么写
+   3），使用注解API的方式
+      http://dubbo.apache.org/zh-cn/docs/user/configuration/annotation.html
+      专门搞一个注解类，将每一个组件手动创建到容器中；  相当于用它替换了application.properties配置文件 （什么标签都有什么样的config类）
+   
+````
+
+* 高可用：zeekeeper宕机与dubbo直连
+
+````
+   注册中心是用zeekeeper搞的，如果注册中心挂了呢？服务提供者与消费者有缓存，可以通过缓存找到对方，利用缓存实现调用；
+   直连：直接指定服务提供者的地址
+   
+   结论：注册中心宕机了，消费者也能调用服务提供者。通过直连或缓存
+````
+
+* 高可用：[负载均衡机制](http://dubbo.apache.org/zh-cn/docs/user/demos/loadbalance.html)
+
+````
+   基于权重的随机负载均衡机制（概率分布）：如 A B 权重分别为30 70，则访问A的概率分别为：3/10 7/10；不用考虑顺序
+   基于权重轮询负载均衡机制：要考虑顺序，顺序又要考虑权限
+   最少活跃数据的负载均衡机制：先问一下上一次处理花了多少时间，挑个最小的访问
+   一致性hash负载均衡机制：通过id算出一个hash值，通过hash访问某台机器
+
+````
+* 高可用：[服务降级](http://dubbo.apache.org/zh-cn/docs/user/demos/service-downgrade.html)
+
+````
+  当服务器压力剧增的情况下，根据实际业务情况及流量，对一些服务和页面有策略的不处理或换种简单的方式处理，从而释放服务器资源
+  以保证核心交易正常动作或高效率运作；
+  可以通过服务降级功能临时屏蔽某个出错的非关键服务，并定义降级后的返回策略
+  
+  1）mock=force:return+null 表示消费方对该服务的方法调用都直接返回 null 值，不发起远程调用。用来屏蔽不重要服务不可用时对调用方的影响。
+还可以改为 
+  2）mock=fail:return+null 表示消费方对该服务的方法调用在失败后，再返回 null 值，不抛异常。用来容忍不重要服务不稳定时对调用方的影响。
+````
