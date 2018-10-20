@@ -273,10 +273,10 @@ Connect（连接就绪）、Accept（接受就绪）、Read（读就绪）、Wri
   容器启动完成后  调用export方法暴露服务
    
 ````
-![](img/014.png)
+![](img/014.jpg)
 
 * Dubbo的原理-服务引用
 
-![](img/015.png)
+![](img/015.jpg)
 
-* Dubbo的原理-服务调用
+* Dubbo的原理-服务调用 [参考调用顺序](http://dubbo.apache.org/zh-cn/docs/dev/design.html)
